@@ -79,7 +79,7 @@
   //  | CTRL           |   Z   |   X    |   C     |   V     |   B      |                                    |   K     |   M    |   ,      |   .     |   /     | SHIFT    |
       &kp LCTRL        &kp Z   &kp X    &kp C     &kp V     &kp B                 &kp RIGHT_ARROW           &kp K     &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
   //  | ---------------------- | RAISE  |  GUI    |  LALT   | SPACE    | FNSYM |                    |FNSYM  | BACKSPC |  DEL   |  UP2     |  ENTER  |---------------------
-      &kp C_MUTE               &tog 1   &kp LGUI  &kp LALT  &kp SPACE  &mo 1      &kp ENTER         &mo 1   &kp BSPC  &kp DEL  &tog 2     &kp ENTER 
+      &kp C_MUTE               &to 1    &kp LGUI  &kp LALT  &kp SPACE  &mo 1      &kp ENTER         &mo 1   &kp BSPC  &kp DEL  &to 2      &kp ENTER 
   //                           |-----------------------------------------------|                    |-----------------------------------------------|
             >;
 
@@ -100,7 +100,7 @@
 // |       |   ?     |    \   |   /    |    -     |    _   |                                             | PGDN    |    (   |    )   |    ??   |    %    |   SHIFT |
    &trans  &kp QMARK &kp BSLH &kp FSLH &kp MINUS  &kp UNDER               &mmv MOVE_RIGHT                &kp PG_DN &kp LPAR &kp RPAR &kp EQUAL &kp PRCNT &kp RSHFT
 // |-----------------| RAISE  |        |          |        |        |                            |       |         |        |        | LOWER   |-------------------|
-  &ext_power EP_TOG  &tog 2   &trans   &trans     &trans   &trans         &mkp LCLK              &trans  &trans    &trans   &trans   &tog 0   
+  &ext_power EP_TOG  &to 2    &trans   &trans     &trans   &trans         &mkp LCLK              &trans  &trans    &trans   &trans   &to 0   
 //                   |----------------------------------------------|                            |---------------------------------------------|
             >;
 
@@ -120,7 +120,7 @@
 // |       |   BTCLR       |    HUD        |   HUI         |    SAD        |    SAI         |                                      | PGDN    |   PRVS       |  PLAY        |    NEXT       |    %    |   SHIFT |
    &trans  &bt BT_CLR      &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI          &mmv MOVE_RIGHT                &kp PG_DN &kp C_PREV     &kp C_PP       &kp C_NEXT      &kp PRCNT &kp RSHFT
 // |-----------------------| RAISE         |               |               |                |        |                     |       |         |              | LOW2         | LOWER         |-------------------|
-  &ext_power EP_TOG        &tog 2          &trans          &trans          &trans           &trans      &mkp LCLK          &trans  &trans    &trans         &tog 0         &tog 1   
+  &ext_power EP_TOG        &to 2           &trans          &trans          &trans           &trans      &mkp LCLK          &trans  &trans    &trans         &to 0          &to 1   
 //                        |--------------------------------------------------------------------------|                     |---------------------------------------------------------------|
 
             >;
