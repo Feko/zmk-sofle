@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  Default, COLEMAK Layer:
+  Default Layer:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -63,7 +63,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', type: backspace}
   - Symbols Layer
-  - {t: Control Layer, h: toggle}
+  - {t: Nav Layer, h: toggle}
   - {t: Symbols Layer, h: toggle}
   Symbols Layer:
   - {t: '`', s: '~'}
@@ -118,19 +118,84 @@ layers:
   - $$mdi:arrow-up-bold$$
   - '%'
   - $$mdi:apple-keyboard-shift$$
-  - EP TOG
-  - {t: Control Layer, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Nav Layer, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  - {t: 'Default, COLEMAK Layer', h: toggle}
+  - {t: Default Layer, h: toggle}
   - $$mdi:arrow-left-bold$$
   - {type: held alternate}
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  Control Layer:
+  Nav Layer:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - PG UP
+  - '{'
+  - $$mdi:arrow-up-bold$$
+  - {t: '9', s: (}
+  - '&'
+  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
+  - A
+  - R
+  - S
+  - T
+  - D
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - HOME
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - END
+  - '#'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - PG DN
+  - $$mdi:skip-previous$$
+  - $$mdi:play-pause$$
+  - $$mdi:skip-next$$
+  - '%'
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: BT/RGB Layer, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: Symbols Layer, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Default Layer, h: toggle}
+  - {t: Symbols Layer, h: toggle}
+  BT/RGB Layer:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
@@ -184,17 +249,19 @@ layers:
   - '%'
   - $$mdi:apple-keyboard-shift$$
   - EP TOG
-  - {t: Control Layer, h: toggle}
+  - {t: Nav Layer, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  - {t: Symbols Layer, h: toggle}
+  - {t: Nav Layer, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Default, COLEMAK Layer', h: toggle}
+  - {t: Default Layer, h: toggle}
   - {t: Symbols Layer, h: toggle}
 combos:
-- p: [14, 28, 40]
-  k: '&soft_off'
+- p: [14, 15]
+  k: {t: '`', s: '~'}
+- p: [55, 56]
+  k: Nav Layer
