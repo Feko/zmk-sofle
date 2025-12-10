@@ -101,11 +101,11 @@
 // |   `   |   F1    |   F2   |   F3   |   F4     |   F5   |                                             |  F6     |   F7   |   F8   |   F9    |  F10    |   F11   |
  &kp GRAVE &kp F1    &kp F2   &kp F3   &kp F4     &kp F5                  &mmv MOVE_UP                   &kp F6    &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
 // |       |   ^     |    *   |    =   |    %     |    |   |                                             | PGUP    |    {   |    }   | PRTSCR  |    &    |   F12   |
-   &trans  &kp CARET &kp STAR &kp EQUAL &kp PRCNT &kp PIPE                &mmv MOVE_DOWN                 &kp PG_UP &kp LBRC &kp RBRC &kp PSCRN &kp AMPS  &kp F12
+   &trans  &kp CARET &kp STAR &kp EQUAL &kp PRCNT &kp PIPE2               &mmv MOVE_DOWN                 &kp PG_UP &kp LBRC &kp RBRC &kp PSCRN &kp AMPS  &kp F12
 // |       |   !     |    @   |    #   |    $     |    &   |                                             | HOME    |    [   |    ]   | SELINE  |    END  |   #~    |
    &trans  &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp AMPS                &mmv MOVE_LEFT                 &kp HOME  &kp LBKT &kp RBKT &seline   &kp END   &kp NUHS
 // |       |   ?     |    \   |   /    |    -     |    _   |                                             | PGDN    |    (   |    )   |    ^    |    %    |   SHIFT |
-   &trans  &kp QMARK &kp BSLH &kp FSLH &kp MINUS  &kp UNDER               &mmv MOVE_RIGHT                &kp PG_DN &kp LPAR &kp RPAR &kp UP    &kp PRCNT &kp RSHFT
+   &trans  &kp QMARK &kp NUBS &kp FSLH &kp MINUS  &kp UNDER               &mmv MOVE_RIGHT                &kp PG_DN &kp LPAR &kp RPAR &kp UP    &kp PRCNT &kp RSHFT
 // |-----------------| RAISE  |        |          |        |        |                            | LOWER |    <-   |        |    v   | ->      |-------------------|
   &trans             &to 2    &trans   &trans     &trans   &trans         &mkp LCLK              &to 0   &kp LEFT  &trans   &kp DOWN &kp RIGHT   
 //                   |----------------------------------------------|                            |---------------------------------------------|
