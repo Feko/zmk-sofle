@@ -265,5 +265,5 @@ combos:
   k: {t: '`', s: '~'}
 - p: [55, 56]
   k: Nav Layer
-- p: [56, 61]
+- p: [55, 61]
   k: Nav Layer
