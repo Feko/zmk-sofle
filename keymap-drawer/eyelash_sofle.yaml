@@ -58,7 +58,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - Symbols Layer
   - $$mdi:keyboard-space$$
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Nav Layer}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -72,7 +72,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - F6
   - F7
   - F8
@@ -85,12 +85,12 @@ layers:
   - {t: '=', s: +}
   - '%'
   - '|'
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - PG UP
   - '{'
   - '}'
   - $$mdi:printer-outline$$
-  - '&'
+  - '&selword'
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -98,7 +98,7 @@ layers:
   - '#'
   - $
   - '&'
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - HOME
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -111,7 +111,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '-', s: _}
   - _
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - PG DN
   - (
   - )
@@ -124,11 +124,11 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:bluetooth-off$$
   - {t: Default Layer, h: toggle}
   - $$mdi:arrow-left-bold$$
-  - {type: held alternate}
-  - $$mdi:arrow-down-bold$$
+  - {t: '$$mdi:arrow-down-bold$$', type: held alternate}
+  - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   Nav Layer:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -186,9 +186,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: BT/RGB Layer, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {type: held alternate}
   - {type: held}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: Symbols Layer, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
