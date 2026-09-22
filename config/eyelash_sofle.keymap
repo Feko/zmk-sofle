@@ -53,6 +53,12 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        selword: selword {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT) &kp LC(LSHFT) &kp RIGHT>;
+        };
     };
 
     behaviors {
@@ -96,7 +102,7 @@
   //  | CTRL           |   Z   |   X    |   C     |   V     |   B      |                                    |   K     |   M    |   ,      |   .     |   /     | SHIFT    |
       &kp LCTRL        &kp Z   &kp X    &kp C     &kp V     &kp B                 &kp RIGHT_ARROW           &kp K     &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
   //  | ---------------------- | GUI    |  LALT   |  FNSYM  | SPACE    | DEL   |                  |  ENTER  | BACKSPC |  FNSYM |  UP2     |  RAISE  |---------------------
-      &kp C_MUTE               &kp LGUI &kp LALT  &mo 1     &kp SPACE  &kp DEL      &kp ENTER     &kp ENTER &kp BSPC  &mo 1    &to 2      &to 1 
+      &kp C_MUTE               &kp LGUI &kp LALT  &mo 1     &kp SPACE  &lt 2 DELETE    &kp ENTER  &kp ENTER &kp BSPC  &mo 1    &to 2      &to 1 
   //                           |-----------------------------------------------|                  |-----------------------------------------------|
             >;
 
@@ -109,15 +115,15 @@
 // TODO FEKO: Missing Lower bar. WTF is &ext_power EP_TOG ?? -> Power Toggle
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 // |   `   |   F1    |   F2   |   F3   |   F4     |   F5   |                                             |  F6     |   F7   |   F8   |   F9    |  F10    |   F11   |
- &kp GRAVE &kp F1    &kp F2   &kp F3   &kp F4     &kp F5                  &mmv MOVE_UP                   &kp F6    &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
-// |       |   ^     |    *   |    =   |    %     |    |   |                                             | PGUP    |    {   |    }   | PRTSCR  |    &    |   F12   |
-   &trans  &kp CARET &kp STAR &kp EQUAL &kp PRCNT &kp PIPE2               &mmv MOVE_DOWN                 &kp PG_UP &kp LBRC &kp RBRC &kp PSCRN &kp AMPS  &kp F12
+ &kp GRAVE &kp F1    &kp F2   &kp F3   &kp F4     &kp F5                  &bt BT_SEL 0                   &kp F6    &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
+// |       |   ^     |    *   |    =   |    %     |    |   |                                             | PGUP    |    {   |    }   | PRTSCR  | SELWORD |   F12   |
+   &trans  &kp CARET &kp STAR &kp EQUAL &kp PRCNT &kp PIPE2               &bt BT_SEL 1                   &kp PG_UP &kp LBRC &kp RBRC &kp PSCRN &selword  &kp F12
 // |       |   !     |    @   |    #   |    $     |    &   |                                             | HOME    |    [   |    ]   | SELINE  |    END  |   #~    |
-   &trans  &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp AMPS                &mmv MOVE_LEFT                 &kp HOME  &kp LBKT &kp RBKT &seline   &kp END   &kp NUHS
-// |       |   ?     |    \   |   /    |    -     |    _   |                                             | PGDN    |    (   |    )   |    ^    |    %    |   SHIFT |
-   &trans  &kp QMARK &kp NUBS &kp FSLH &kp MINUS  &kp UNDER               &mmv MOVE_RIGHT                &kp PG_DN &kp LPAR &kp RPAR &caps_word &kp PRCNT &kp RSHFT
-// |-----------------| RAISE  |        |          |        |        |                            | LOWER |    <-   |        |    v   | ->      |-------------------|
-  &trans             &to 2    &trans   &trans     &trans   &trans         &mkp LCLK              &to 0   &kp LEFT  &trans   &kp DOWN &kp RIGHT   
+   &trans  &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp AMPS                &bt BT_SEL 2                   &kp HOME  &kp LBKT &kp RBKT &seline   &kp END   &kp NUHS
+// |       |   ?     |    \   |   /    |    -     |    _   |                                             | PGDN    |    (   |    )   | CAPSWRD |    %    |   SHIFT |
+   &trans  &kp QMARK &kp NUBS &kp FSLH &kp MINUS  &kp UNDER               &bt BT_SEL 3                   &kp PG_DN &kp LPAR &kp RPAR &caps_word &kp PRCNT &kp RSHFT
+// |-----------------| RAISE  |        |          |        |        |                            | LOWER |    <-   |    v   |    ^   | ->      |-------------------|
+  &trans             &to 2    &trans   &trans     &trans   &trans         &bt BT_CLR             &to 0   &kp LEFT  &kp DOWN &kp UP &kp RIGHT   
 //                   |----------------------------------------------|                            |---------------------------------------------|
             >;
 
